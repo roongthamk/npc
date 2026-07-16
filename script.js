@@ -61,19 +61,19 @@ onAuthStateChanged(auth, (user) => {
   }
   
   const email = user.email;
-//  const allowed =
-//    email.endsWith("@chula.ac.th") ||
-//    email.endsWith("@student.chula.ac.th");
+  const allowed =
+    email.endsWith("@chula.ac.th") ||
+    email.endsWith("@student.chula.ac.th");
   
-//  if (!allowed) {
-//    alert(
-//      "Please sign in using your Chulalongkorn account."
-//    );
-//    signOut(auth);
-//    return;
-//  }
-//  document.getElementById("userInfo").textContent =
-//    "Signed in as: " + email;
+  if (!allowed) {
+    alert(
+      "Please sign in using your Chulalongkorn account."
+    );
+    signOut(auth);
+    return;
+  }
+  document.getElementById("userInfo").textContent =
+    "Signed in as: " + email;
 });
 
 
