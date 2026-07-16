@@ -64,5 +64,6 @@ button{
   color:white;
   cursor:pointer;
   font-family:Arial,sans-serif;
-  font-weight:bold; 
+  font-weight:bold;
+  text-align:center;
 }
