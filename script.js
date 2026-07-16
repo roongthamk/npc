@@ -72,7 +72,8 @@ onAuthStateChanged(auth, (user) => {
     signOut(auth);
     return;
   }
-  showApplication(email);
+  document.getElementById("userInfo").textContent =
+    "Signed in as: " + email;
 });
 
 
