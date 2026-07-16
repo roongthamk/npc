@@ -68,3 +68,17 @@ button{
   font-weight:bold;
   text-align:center;
 }
+
+.button-container {
+  display:flex;
+  justify-content:center;
+  margin-top:24px;
+}
+
+#userInfo {
+  margin-top:12px;
+  text-align:center;
+  font-size:16px;
+  color:#555;
+  font-style:italic;
+}
