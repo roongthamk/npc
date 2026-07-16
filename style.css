@@ -54,7 +54,9 @@ h2 {
 }
 
 button{
-  margin-top:24px;
+  display: block;
+  margin: 24px auto 0 auto;
+  
   padding:12px;
   font-size:16px;
   border:none;
