@@ -89,5 +89,14 @@ button{
     margin:0px;
   }
 
+  .notification-1 {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    color: red;
+    margin: 0px 20px;
+  }
+
   
 }
