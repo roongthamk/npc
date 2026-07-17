@@ -83,7 +83,7 @@ button{
   font-style:italic;
 }
 
-@media (max-width:600px){
+@media(max-width:600px) {
   h2 {
     font-size:28px;
     margin:0px;
