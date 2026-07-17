@@ -96,12 +96,15 @@ button{
 
   .button-container{
     margin-top:10px;
+    margin-bottom:15px;
   }
-
-  
 
   .title-1 {
     font-size:20px; 
+  }
+
+  .card {
+    padding:10px 20px;
   }
   
 }
