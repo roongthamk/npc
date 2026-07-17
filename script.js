@@ -4,7 +4,8 @@ import { initializeApp }
 import {
   getAuth,
   GoogleAuthProvider,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   onAuthStateChanged,
   signOut
 }
@@ -38,7 +39,7 @@ const loginButton = document.getElementById("loginButton");
 
 loginButton.onclick = async () => {
   try {
-    const result = await signInWithPopup(auth, provider);
+    const result = await signInWithRedirect(auth, provider);
     const user = result.user;
 
     console.log("Signed in:");
