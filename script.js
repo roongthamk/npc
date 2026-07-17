@@ -59,28 +59,28 @@ loginButton.onclick = async () => {
 };
 
 // 7. Listen for authentication state
-onAuthStateChanged(auth, (user) => {
-  if (!user) {
-    document.getElementById("userInfo").textContent =
-      "Not signed in";
-    return;
-  }
-  
-  const email = user.email;
-  const allowed =
-    email.endsWith("@chula.ac.th") ||
-    email.endsWith("@student.chula.ac.th");
-  
-  if (!allowed) {
-    alert(
-      "Please sign in using your Chulalongkorn account."
-    );
-    signOut(auth);
-    return;
-  }
-  document.getElementById("userInfo").textContent =
-    "Signed in as: " + email;
-});
+//onAuthStateChanged(auth, (user) => {
+//  if (!user) {
+//    document.getElementById("userInfo").textContent =
+//      "Not signed in";
+//    return;
+//  }
+//  
+//  const email = user.email;
+//  const allowed =
+//    email.endsWith("@chula.ac.th") ||
+//    email.endsWith("@student.chula.ac.th");
+//  
+//  if (!allowed) {
+//    alert(
+//      "Please sign in using your Chulalongkorn account."
+//    );
+//    signOut(auth);
+//    return;
+//  }
+//  document.getElementById("userInfo").textContent =
+//    "Signed in as: " + email;
+//});
 
 
 const CATEGORIES = [
