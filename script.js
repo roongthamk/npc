@@ -1,3 +1,4 @@
+// 1. Import Firebase modules
 import { initializeApp }
   from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
 
@@ -11,6 +12,7 @@ import {
 }
   from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
+// 2. Firebase configuration 
 const firebaseConfig = {
   apiKey: "AIzaSyDYoKDRbsHl8g5RQ4r_i7DdKX0xvCDIb2c",
   authDomain: "npc-web-app.firebaseapp.com",
@@ -21,11 +23,11 @@ const firebaseConfig = {
   measurementId: "G-P75JJWEMNJ"
 };
 
-// Initialize Firebase
+// 3. Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
   
-// Google provider
+// 4. Create Google provider
 const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({
@@ -34,7 +36,10 @@ provider.setCustomParameters({
   
 console.log("Firebase initialized successfully!");
 
-// Button
+// 5. Handle redirect result
+getRedirectResult(auth).catch(console.error);
+
+// 6. Setup login button
 const loginButton = document.getElementById("loginButton");
 
 loginButton.onclick = async () => {
@@ -53,7 +58,7 @@ loginButton.onclick = async () => {
   }
 };
 
-//User detection
+// 7. Listen for authentication state
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     document.getElementById("userInfo").textContent =
