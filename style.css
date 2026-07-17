@@ -82,3 +82,10 @@ button{
   color:#555;
   font-style:italic;
 }
+
+@media (max-width:600px){
+  h2 {
+    font-size:28px;
+    margin:0px;
+  }
+}
